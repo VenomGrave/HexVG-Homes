@@ -1,0 +1,69 @@
+# ====== USTAWIENIA GUI ======
+gui:
+  title: "&8Twoje &cDomy"
+  item_name: "&cDom"
+  item_lore:
+    - "&fLPM &8- &fTeleport"
+    - "&fPPM &8- &fUstaw lokalizacje domu"
+    - "&fQ &8- &cUsun dom"
+
+homes:
+  slots: [10, 11, 12, 13, 14, 15]
+
+confirm_gui:
+  title: "&8Usunac dom?"
+  green_name: "&aPotwierdz"
+  green_lore:
+    - "&7Kliknij, aby usunac dom ze slotu {slot}"
+  red_name: "&cAnuluj"
+  red_lore:
+    - "&7Kliknij, aby przerwac"
+
+teleport:
+  warmup_seconds: 3                         # Czas odliczania przed teleportem (0 = bez odliczania)
+  cancel_on_move: true                      # Przerwij odliczanie, jeśli gracz się poruszy
+  move_threshold: 0.12                      # Próg ruchu (w blokach), powyżej którego przerwać
+  cancel_on_damage: true                    # Przerwij odliczanie, jeśli gracz dostanie obrażenia (w trakcie warmupu)
+
+  # Blokada ROZPOCZĘCIA teleportu po obrażeniach (anti-combat).
+  # enabled: true  -> nie pozwól na start teleportu przez 'seconds' od ostatnich obrażeń.
+  # enabled: false -> gracz może od razu zacząć teleport po obrażeniach.
+  block_after_damage:
+    enabled: true                           # Włącz/Wyłącz blokadę startu po obrażeniach
+    seconds: 10                             # Czas blokady (sekundy)
+
+restrictions:
+  allow_worlds: []
+  block_nether_roof: true                   # Blokuj ustawianie/TP na dachu Netheru (Y > 127)
+  y_min: 0                                  # Minimalna dozwolona wysokość Y dla ustawienia/TP
+  y_max: 320                                # Maksymalna dozwolona wysokość Y dla ustawienia/TP
+
+messages:
+  prefix: "&f[&0&lHex&8&lHomes&f]&7 "
+
+  set_success: "&aPomyslnie &2ustawiles lokalizacje &adomu!"
+  already_exists: "&eNa tym slocie masz juz ustawiony dom.&7 Najpierw go usun (&fQ&7), a potem ustaw ponownie."
+  removed_success: "&aUsunieto lokalizacje &adomu z tego slotu."
+  remove_open_confirm: "&7Potwierdz usuniecie w oknie."
+  remove_cancelled: "&eAnulowano usuniecie."
+  not_set: "&cNie masz ustawionego domu! Uzyj PPM, aby ustawic lokalizacje."
+  slot_empty: "&7Ten slot nie ma ustawionego domu."   # używane przy próbie usunięcia pustego slota
+
+  countdown_subtitle: "&fTeleportowanie do &7domu &fza {s}s"
+  teleported_subtitle: "&aTeleportowano do &7domu"
+  cancelled_move: "&cTeleport przerwany: ruch."
+  cancelled_damage: "&cTeleport przerwany: otrzymales obrazenia."
+  cancelled_combat: "&cTeleport przerwany: walka."
+  no_target: "&cBrak docelowej lokalizacji."
+
+  world_blocked: "&cNie mozesz ustawic domu w tym swiecie."
+  y_blocked: "&cNie mozesz ustawic domu na tej wysokosci."
+
+  no_perm: "&cBrak uprawnien."
+  no_perm_set: "&cBrak uprawnien do ustawienia domu."
+  no_perm_remove: "&cBrak uprawnien do usuniecia domu."
+  no_perm_tp: "&cBrak uprawnien do teleportu."
+  player_only: "&cTa komenda jest tylko dla graczy."
+
+  reload_ok: "&aPrzeladowano konfiguracje."
+  reload_err: "&cNie udalo sie przeladowac konfiguracji. Sprawdz konsole."

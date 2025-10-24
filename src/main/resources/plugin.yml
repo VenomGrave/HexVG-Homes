@@ -1,0 +1,51 @@
+name: HexVG-Homes
+main: com.venom.hexplugin.hexhomes.HexHomes
+version: 1.0
+api-version: "1.16"
+author: VenomGrove
+description: "HexVG-Homes: GUI domów, teleport z odliczaniem, usuwanie z potwierdzeniem"
+
+commands:
+  dom:
+    description: Otwiera GUI domów
+    usage: /dom [reload]
+    aliases:
+      - home
+      - domy
+      - homes
+      - homegui
+      - domki
+    permission: homesgui.command.dom
+
+permissions:
+  homesgui.command.dom:
+    description: Pozwala użyć /dom (/home, /domy)
+    default: true
+
+  homesgui.tp:
+    description: Teleport do domu (LPM w GUI)
+    default: true
+
+  homesgui.set:
+    description: Ustawianie domu (PPM w GUI)
+    default: true
+
+  homesgui.remove:
+    description: Usuwanie domu (Q/Ctrl+Q + potwierdzenie w GUI)
+    default: true
+
+  homesgui.admin.reload:
+    description: Pozwala na /dom reload (przeładowanie configu)
+    default: op
+
+  homesgui.bypass.restrictions:
+    description: Omija ograniczenia światów/Y oraz dach Netheru
+    default: op
+
+  homesgui.bypass.combat:
+    description: Omija blokadę rozpoczęcia teleportu po obrażeniach
+    default: op
+
+  homesgui.bypass.cooldown:
+    description: (Zapasowa) Omija cooldown teleportu, jeśli kiedyś go włączysz
+    default: op
